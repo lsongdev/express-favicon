@@ -1,0 +1,32 @@
+{
+  "name": "express-favicon",
+  "version": "1.0.1",
+  "description": "express favicon",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "express",
+    "favicon"
+  ],
+  "author": "lsong",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.7.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^4.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/song940/express-favicon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/song940/express-favicon/issues"
+  },
+  "homepage": "https://github.com/song940/express-favicon"
+}
