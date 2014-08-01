@@ -9,6 +9,7 @@ module.exports = function(icon){
 	}
 	return function(req, res, next){
 		if(/\/favicon\.ico$/.test(req.url)){
+			res.set('Content-Type', 'image/x-icon');
 			res.send(iconStream);
 		}else{
 			next();

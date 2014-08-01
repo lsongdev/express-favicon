@@ -4,7 +4,7 @@
   "description": "express favicon",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test/test.js"
   },
   "keywords": [
     "express",
@@ -13,13 +13,12 @@
   "author": "lsong",
   "license": "MIT",
   "devDependencies": {
-    "express": "^4.7.2"
+    "express": "*"
   },
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "express": "^4.7.2"
   },
   "repository": {
     "type": "git",
