@@ -1,6 +1,6 @@
-# express-favicon
+# express-favicon 
 
-[![Build Status](https://travis-ci.org/song940/express-favicon.svg?branch=master)](https://travis-ci.org/song940/express-favicon)
+![npm](https://badge.fury.io/js/express-static.png)
 
 favicon for express middleware .
 
@@ -19,12 +19,13 @@ var express = require('express');
 var favicon = require('express-favicon');
 
 var app = express();
+
 app.use(favicon(__dirname + '/public/favicon.ico'));
 
 // Add your routes here, etc.
 
 var server = app.listen(3000, function(){
-	console.log('server is running at %s .', server.port());
+	console.log('server is running at %s .', server.address().port);
 });
 
 ```
