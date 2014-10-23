@@ -1,5 +1,6 @@
 # express-favicon 
 
+![express-favicon](https://travis-ci.org/song940/express-favicon.svg?branch=master)
 ![npm](https://badge.fury.io/js/express-static.png)
 
 favicon for express middleware .
