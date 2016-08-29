@@ -27,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/song940/express-favicon/issues"
   },
-  "homepage": "https://github.com/song940/express-favicon"
+  "homepage": "https://github.com/song940/express-favicon",
+  "engines": {"node": ">=4"}
 }
