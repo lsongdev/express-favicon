@@ -17,6 +17,7 @@ app.use(favicon(file));
 app.listen(3001, () => {
 	console.info('server is running.');
 	http.get('http://127.0.0.1:3001/blabla/favicon.ico', (res) => {
+		assert.equal(res.headers['content-type'], 'image/x-icon', 'wrong mime type');
 		let received = [];
 		res.on('data', (chunk) => received.push(chunk));
 		res.on('end', () => {
