@@ -20,7 +20,7 @@ const favicon = require('express-favicon');
 
 const app = express();
 
-app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(favicon(__dirname + '/public/favicon.png'));
 
 // Add your routes here, etc.
 
