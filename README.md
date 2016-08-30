@@ -1,11 +1,10 @@
-# express-favicon 
+# express-favicon
 
-![express-favicon](https://travis-ci.org/song940/express-favicon.svg?branch=master)
-![npm](https://badge.fury.io/js/express-static.png)
+favicon for express middleware.
 
-favicon for express middleware .
+[![build status](https://img.shields.io/travis/song940/express-favicon.svg)](https://travis-ci.org/song940/express-favicon)
 
-[![NPM](https://nodei.co/npm/express-favicon.png)](https://nodei.co/npm/express-favicon/)
+[![npm](https://nodei.co/npm/express-favicon.png)](https://nodei.co/npm/express-favicon/)
 
 ## Install
 
@@ -15,20 +14,19 @@ npm install express-favicon --save
 
 ## Usage
 
-```
-var express = require('express');
-var favicon = require('express-favicon');
+```js
+const express = require('express');
+const favicon = require('express-favicon');
 
-var app = express();
+const app = express();
 
-app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(favicon(__dirname + '/public/favicon.png'));
 
 // Add your routes here, etc.
 
-var server = app.listen(3000, function(){
+const server = app.listen(3000, function(){
 	console.log('server is running at %s .', server.address().port);
 });
-
 ```
 
 

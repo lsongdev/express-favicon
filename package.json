@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "express favicon",
   "main": "index.js",
+  "files": ["index.js"],
   "scripts": {
     "test": "node test/test.js"
   },
@@ -11,21 +12,21 @@
     "favicon"
   ],
   "author": "lsong",
+  "contributors": [
+  	"Jannis R <mail@jannisr.de>"
+  ],
   "license": "MIT",
   "devDependencies": {
-    "express": "*"
+    "express": "^4.14"
   },
   "directories": {
     "test": "test"
   },
   "dependencies": {
+  	"express": "4.x"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/song940/express-favicon.git"
-  },
-  "bugs": {
-    "url": "https://github.com/song940/express-favicon/issues"
-  },
-  "homepage": "https://github.com/song940/express-favicon"
+  "repository": "https://github.com/song940/express-favicon.git",
+  "bugs": "https://github.com/song940/express-favicon/issues",
+  "homepage": "https://github.com/song940/express-favicon",
+  "engines": {"node": ">=4"}
 }

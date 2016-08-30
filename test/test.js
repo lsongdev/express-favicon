@@ -1,24 +1,31 @@
-var express = require('express');
-var favicon = require('../index');
-var http = require('http');
+'use strict'
 
-var app = express();
+const fs = require('fs');
+const path = require('path');
+const express = require('express');
+const favicon = require('../index');
+const http = require('http');
+const assert = require('assert');
 
-app.use(favicon(__dirname + '/favicon.ico'));
+const file = path.join(__dirname, 'favicon.png');
+const data = fs.readFileSync(file);
+
+const app = express();
+app.use(favicon(file));
 
 
-app.listen(3001, function(){
-	console.log('server is running .');
-	http.get('http://127.0.0.1:3001/blabla/favicon.ico', function(res){
-		var data = '';
-		res.on('data', function(chunk){
-			data += chunk;
+app.listen(3001, () => {
+	console.info('server is running.');
+	http.get('http://127.0.0.1:3001/blabla/favicon.png', (res) => {
+		assert.equal(res.headers['content-type'], 'image/png', 'wrong mime type');
+		let received = [];
+		res.on('data', (chunk) => received.push(chunk));
+		res.on('end', () => {
+			const isEqual = Buffer.compare(data, Buffer.concat(received)) === 0;
+			assert.ok(isEqual, 'received data is not equal');
+			console.info('test passed.');
+			process.exit(0);
 		});
-		res.on('end', function(){
-			var is_ok = (data.trim() == 'test');
-			console.log('test: %s', is_ok);
-			process.exit(is_ok ? 0 : 1);
-		});
-	});
-	
+	})
+	.on('error', assert.ifError);
 });
