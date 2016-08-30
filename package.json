@@ -1,6 +1,6 @@
 {
   "name": "express-favicon",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "express favicon",
   "main": "index.js",
   "files": ["index.js"],
