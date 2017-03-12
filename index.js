@@ -1,11 +1,20 @@
 'use strict'
+const fs = require('fs');
+const path = require('path');
 
-module.exports = (file, pattern) => {
-	pattern = pattern || /\/favicon\.png$/;
+const mime = {
+  '.png': 'image/png',
+  '.ico': 'image/x-icon'
+};
 
-	return (req, res, next) => {
-		if (pattern.test(req.url))
-			res.sendFile(file);
-		else next();
-	};
+module.exports = function (filename, pattern) {
+  filename = path.resolve(filename);
+  pattern = pattern ||  /\/favicon\.(png|ico)$/;
+  return function (req, res, next) {
+    if (pattern.test(req.url)) {
+      const ext = path.extname(filename);
+      res.set('Content-Type', mime[ext]);
+      fs.createReadStream(filename).pipe(res);
+    } else next();
+  };
 };
