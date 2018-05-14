@@ -1,6 +1,6 @@
 # express-favicon
 
-favicon for express middleware.
+express favicon middleware.
 
 [![build status](https://img.shields.io/travis/song940/express-favicon.svg)](https://travis-ci.org/song940/express-favicon)
 

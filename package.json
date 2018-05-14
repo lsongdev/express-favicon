@@ -1,9 +1,11 @@
 {
   "name": "express-favicon",
-  "version": "2.0.0",
-  "description": "express favicon",
+  "version": "2.0.1",
+  "description": "express favicon middleware",
   "main": "index.js",
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "test": "node test/test.js"
   },
@@ -13,20 +15,25 @@
   ],
   "author": "lsong",
   "contributors": [
-  	"Jannis R <mail@jannisr.de>"
+    "Jannis R <mail@jannisr.de>"
   ],
   "license": "MIT",
   "devDependencies": {
-    "express": "^4.14"
+    "express": "4"
   },
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-  	"express": "4.x"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/song940/express-favicon.git"
   },
-  "repository": "https://github.com/song940/express-favicon.git",
-  "bugs": "https://github.com/song940/express-favicon/issues",
+  "bugs": {
+    "url": "https://github.com/song940/express-favicon/issues"
+  },
   "homepage": "https://github.com/song940/express-favicon",
-  "engines": {"node": ">=4"}
+  "engines": {
+    "node": ">=4"
+  },
+  "dependencies": {}
 }
