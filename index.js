@@ -7,10 +7,10 @@ const mime = {
   '.ico': 'image/x-icon'
 };
 
-module.exports = function (filename, pattern) {
+module.exports = (filename, pattern) => {
   filename = path.resolve(filename);
-  pattern = pattern ||  /\/favicon\.(png|ico)$/;
-  return function (req, res, next) {
+  pattern = pattern || /\/favicon\.(png|ico)$/;
+  return (req, res, next) => {
     if (pattern.test(req.url)) {
       const ext = path.extname(filename);
       res.set('Content-Type', mime[ext]);
